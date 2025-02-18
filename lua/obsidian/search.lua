@@ -10,7 +10,7 @@ local compat = require "obsidian.compat"
 
 local M = {}
 
-M._BASE_CMD = { "rg", "--no-config", "--type=md" }
+M._BASE_CMD = { "rg", "--no-config", "--type=md", "--type-add", "md:*.mchat" }
 M._SEARCH_CMD = compat.flatten { M._BASE_CMD, "--json" }
 M._FIND_CMD = compat.flatten { M._BASE_CMD, "--files" }
 
